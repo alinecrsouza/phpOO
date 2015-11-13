@@ -2,7 +2,6 @@
 <div class="jumbotron">
 <?php
 
-require_once "../bootstrap.php";
 require_once "../pages/header.php";
 
 require_once "db_cliente.php";
