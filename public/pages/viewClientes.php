@@ -1,4 +1,6 @@
-
+<?php
+require_once "header.php";
+?>
                 <h1>Clientes</h1>
                     <div class="jumbotron">
                         <?php

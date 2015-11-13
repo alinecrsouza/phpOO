@@ -1,16 +1,15 @@
 
-<h1>Informações do Cliente</h1>
-<div class="jumbotron">
 <?php
 
-require_once "../pages/header.php";
-
+require_once "header.php";
 require_once "dbCliente.php";
 
 IF(isset($_GET)) {
     $key = $_GET["codigo"] - 1;
 }
 ?>
+<h1>Informações do Cliente</h1>
+<div class="jumbotron">
     <table class="table table-striped">
         <thead>
             <tr>
@@ -27,15 +26,15 @@ IF(isset($_GET)) {
         </thead>
         <tbody>
             <tr>
-                <td><strong><?php echo $cliente[$key]->getId();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getNome();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getCpf();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getEmail();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getTelefone();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getEndereco();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getMunicipio();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getUf();?></strong></td>
-			    <td><strong><?php echo $cliente[$key]->getCep();?></strong></td>
+                <td><?php echo $cliente[$key]->getId();?></td>
+			    <td><?php echo $cliente[$key]->getNome();?></td>
+			    <td><?php echo $cliente[$key]->getCpf();?></td>
+			    <td><?php echo $cliente[$key]->getEmail();?></td>
+			    <td><?php echo $cliente[$key]->getTelefone();?></td>
+			    <td><?php echo $cliente[$key]->getEndereco();?></td>
+			    <td><?php echo $cliente[$key]->getMunicipio();?></td>
+			    <td><?php echo $cliente[$key]->getUf();?></td>
+			    <td><?php echo $cliente[$key]->getCep();?></td>
 		    </tr>
         </tbody>
     </table>

@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/pages/header.php';
-
 $permission = array('/pages/infoCliente', 'index.php');
 
 if(empty($pagina)){
