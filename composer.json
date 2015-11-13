@@ -1,0 +1,16 @@
+{
+	"name":"Projeto PHP OO",
+	"authors": [
+        {
+			"name":"Jorgito Santos",
+			"email":"jis@gmai.com"
+		}
+	],
+    	"mininum-stability":"dev",
+	"autoload":{
+		"psr-4":{
+		    "src\\app\\classes\\": "src/app/classes/",
+		    "tests\\": "tests/"
+		}
+	}
+}
