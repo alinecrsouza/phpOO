@@ -2,7 +2,7 @@
                 <h1>Clientes</h1>
                     <div class="jumbotron">
                         <?php
-                        if(isset($_POST['cres'])){
+                        if(isset($_POST['asc'])){
                             ksort($cliente);
                         }elseif(isset($_POST['desc'])){
                             krsort($cliente);
@@ -11,7 +11,7 @@
                         }
                         ?>
                         <form method="post">
-                            <button class="btn btn-primary" type="submit" value="cres" name="cres">
+                            <button class="btn btn-primary" type="submit" value="asc" name="asc">
                                 <span class="glyphicon glyphicon-sort-by-alphabet"></span>
                             </button>
                             <button class="btn btn-primary" type="submit" value="desc" name="desc">
