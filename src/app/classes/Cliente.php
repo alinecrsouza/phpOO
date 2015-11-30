@@ -6,7 +6,6 @@ class Cliente
     // Dados pessoais
     private $id;
     private $nome;
-    private $cpf;
     private $email;
     private $telefone;
     // Endereço
@@ -15,11 +14,10 @@ class Cliente
     private $uf;
     private $cep;
     
-    function __construct($id, $nome, $cpf, $email, $telefone, $endereco, $municipio, $uf, $cep)
+    function __construct($id, $nome, $email, $telefone, $endereco, $municipio, $uf, $cep)
     {
         $this->id = $id;
         $this->nome = $nome;
-        $this->cpf = $cpf;
         $this->email = $email;
         $this->telefone = $telefone;
         $this->endereco = $endereco;
@@ -34,10 +32,6 @@ class Cliente
     
     public function getNome() {
         return $this->nome;
-    }
-
-    public function getCpf() {
-        return $this->cpf;
     }
 
     public function getEmail() {
@@ -70,10 +64,6 @@ class Cliente
     
     public function setNome($nome) {
         $this->nome = $nome;
-    }
-
-    public function setCpf($cpf) {
-        $this->cpf = $cpf;
     }
 
     public function setEmail($email) {

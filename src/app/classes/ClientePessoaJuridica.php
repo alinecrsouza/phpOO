@@ -9,7 +9,28 @@
 namespace src\app\classes;
 
 
-class ClientePessoaJuridica
+class ClientePessoaJuridica extends Cliente
 {
+    private $cnpj;
 
+    function __construct($id, $nome, $cnpj, $email, $telefone, $endereco, $municipio, $uf, $cep){
+        parent::__construct($id, $nome, $email, $telefone, $endereco, $municipio, $uf, $cep);
+        $this->cnpj = $cnpj;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCnpj()
+    {
+        return $this->cnpj;
+    }
+
+    /**
+     * @param mixed $cnpj
+     */
+    public function setCnpj($cnpj)
+    {
+        $this->cnpj = $cnpj;
+    }
 }
