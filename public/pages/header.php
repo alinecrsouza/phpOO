@@ -8,7 +8,7 @@ require_once __DIR__ . '/../pages/dbCliente.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tarefa 1 - Curso PHP Orientado a Objetos</title>
+    <title>Tarefa 2 - Curso PHP Orientado a Objetos</title>
     
     <!-- style 
     <link rel="stylesheet" href="css/style.css"> -->

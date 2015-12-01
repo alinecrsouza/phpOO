@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aline.souza
- * Date: 30/11/2015
- * Time: 13:42
- */
 
 namespace src\app\classes;
 
 
-class ClientePessoaJuridica extends Cliente
+class ClientePessoaJuridica extends Cliente implements GrauImportanciaInterface
 {
     private $cnpj;
 
@@ -32,5 +26,21 @@ class ClientePessoaJuridica extends Cliente
     public function setCnpj($cnpj)
     {
         $this->cnpj = $cnpj;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGrau()
+    {
+        return $this->grau;
+    }
+
+    /**
+     * @param mixed $grau
+     */
+    public function setGrau($grau)
+    {
+        $this->grau = $grau;
     }
 }

@@ -15,10 +15,10 @@ require_once "header.php";
                         ?>
                         <form method="post">
                             <button class="btn btn-primary" type="submit" value="asc" name="asc">
-                                <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+                                <span class="glyphicon glyphicon-sort-by-order"></span>
                             </button>
                             <button class="btn btn-primary" type="submit" value="desc" name="desc">
-                                <span class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+                                <span class="glyphicon glyphicon-sort-by-order-alt"></span>
                             </button>
                         </form>
                         <table class="table table-striped">
@@ -30,6 +30,7 @@ require_once "header.php";
                                     <th>CPF/CNPJ</th>
                                     <th>E-mail</th>
                                     <th>Telefone</th>
+                                    <th>Importância</th>
                                     <th>Mais Informações</th>
                                 </tr>
                             </thead>
@@ -38,7 +39,7 @@ require_once "header.php";
                                 foreach ($cliente as $key => $value) {
                                 ?>
                                 <tr>
-                                <td><?php echo $value->getId();?></td>
+                                <td class="text-center"><?php echo $value->getId();?></td>
                                 <td><?php
                                     if($value instanceof src\app\classes\ClientePessoaFisica){
                                         echo "Pessoa Física";
@@ -60,6 +61,7 @@ require_once "header.php";
                                 </td>
                                 <td><?php echo $value->getEmail();?></td>
                                 <td><?php echo $value->getTelefone();?></td>
+                                <td class="text-center"><?php echo $value->getGrau()." ";?><span class="glyphicon glyphicon-star"></span></td>
                                 <td>
                                     <a href="./pages/infoCliente.php?codigo=<?php echo $value->getId();?>">
                                         <button class="btn btn-info" type="submit" name="info">

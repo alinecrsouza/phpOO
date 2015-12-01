@@ -13,6 +13,8 @@ class Cliente
     protected $municipio;
     protected $uf;
     protected $cep;
+    //Grau de Importancia
+    protected $grau;
     
     function __construct($id, $nome, $email, $telefone, $endereco, $municipio, $uf, $cep)
     {
