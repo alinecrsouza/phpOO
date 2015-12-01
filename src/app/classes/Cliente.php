@@ -4,15 +4,15 @@ namespace src\app\classes;
 class Cliente
 {
     // Dados pessoais
-    private $id;
-    private $nome;
-    private $email;
-    private $telefone;
+    protected $id;
+    protected $nome;
+    protected $email;
+    protected $telefone;
     // Endereço
-    private $endereco;
-    private $municipio;
-    private $uf;
-    private $cep;
+    protected $endereco;
+    protected $municipio;
+    protected $uf;
+    protected $cep;
     
     function __construct($id, $nome, $email, $telefone, $endereco, $municipio, $uf, $cep)
     {

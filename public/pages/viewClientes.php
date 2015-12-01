@@ -1,5 +1,6 @@
 <?php
 require_once "header.php";
+
 ?>
                 <h1>Clientes</h1>
                     <div class="jumbotron">
@@ -24,8 +25,9 @@ require_once "header.php";
                             <thead>
                                 <tr>
                                     <th>Código</th>
+                                    <th>Tipo de Cliente</th>
                                     <th>Nome</th>
-                                    <th>CPF</th>
+                                    <th>CPF/CNPJ</th>
                                     <th>E-mail</th>
                                     <th>Telefone</th>
                                     <th>Mais Informações</th>
@@ -37,8 +39,25 @@ require_once "header.php";
                                 ?>
                                 <tr>
                                 <td><?php echo $value->getId();?></td>
+                                <td><?php
+                                    if($value instanceof src\app\classes\ClientePessoaFisica){
+                                        echo "Pessoa Física";
+                                    }
+                                    else{
+                                        echo "Pessoa Jurídica";
+                                    }
+                                    ?>
+                                </td>
                                 <td><?php echo $value->getNome();?></td>
-                                <td><?php echo $value->getCPF();?></td>
+                                <td><?php
+                                    if($value instanceof src\app\classes\ClientePessoaFisica){
+                                        echo $value->getCpf();
+                                    }
+                                    else{
+                                        echo $value->getCnpj();
+                                    }
+                                    ?>
+                                </td>
                                 <td><?php echo $value->getEmail();?></td>
                                 <td><?php echo $value->getTelefone();?></td>
                                 <td>

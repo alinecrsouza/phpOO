@@ -15,7 +15,7 @@ IF(isset($_GET)) {
             <tr>
                 <th>Código</th>
                 <th>Nome</th>
-                <th>CPF</th>
+                <th>CPF/CNPJ</th>
                 <th>E-mail</th>
                 <th>Telefone</th>
                 <th>Endereço</th>
@@ -28,7 +28,15 @@ IF(isset($_GET)) {
             <tr>
                 <td><?php echo $cliente[$key]->getId();?></td>
 			    <td><?php echo $cliente[$key]->getNome();?></td>
-			    <td><?php echo $cliente[$key]->getCpf();?></td>
+			    <td><?php
+                    if($cliente[$key] instanceof \src\app\classes\ClientePessoaFisica){
+                        echo $cliente[$key]->getCpf();
+                    }
+                    else{
+                        echo $cliente[$key]->getCnpj();
+                    }
+                    ?>
+                </td>
 			    <td><?php echo $cliente[$key]->getEmail();?></td>
 			    <td><?php echo $cliente[$key]->getTelefone();?></td>
 			    <td><?php echo $cliente[$key]->getEndereco();?></td>

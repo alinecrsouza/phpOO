@@ -1,17 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aline.souza
- * Date: 30/11/2015
- * Time: 13:42
- */
 
 namespace src\app\classes;
 
+require_once "Cliente.php";
 
 class ClientePessoaFisica extends Cliente
 {
-    private $cpf;
+    protected $cpf;
 
     function __construct($id, $nome, $cpf, $email, $telefone, $endereco, $municipio, $uf, $cep){
         parent::__construct($id, $nome, $email, $telefone, $endereco, $municipio, $uf, $cep);
