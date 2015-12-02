@@ -61,7 +61,13 @@ require_once "header.php";
                                 </td>
                                 <td><?php echo $value->getEmail();?></td>
                                 <td><?php echo $value->getTelefone();?></td>
-                                <td class="text-center"><?php echo $value->getGrau()." ";?><span class="glyphicon glyphicon-star"></span></td>
+                                <td class="text-center">
+                                    <?php
+                                        for($i=0;$i<$value->getGrau();$i++){
+                                            echo "<span class='glyphicon glyphicon-star'></span>";
+                                        }
+                                    ?>
+                                </td>
                                 <td>
                                     <a href="./pages/infoCliente.php?codigo=<?php echo $value->getId();?>">
                                         <button class="btn btn-info" type="submit" name="info">

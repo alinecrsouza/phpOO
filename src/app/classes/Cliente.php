@@ -1,7 +1,9 @@
 <?php
 namespace src\app\classes;
 
-class Cliente
+require_once "EnderecoCobrancaInterface.php";
+
+class Cliente implements EnderecoCobrancaInterface
 {
     // Dados pessoais
     protected $id;
@@ -13,6 +15,12 @@ class Cliente
     protected $municipio;
     protected $uf;
     protected $cep;
+    // Endereço Cobranca
+    protected $enderecoCob;
+    protected $municipioCob;
+    protected $ufCob;
+    protected $cepCob;
+
     //Grau de Importancia
     protected $grau;
     
@@ -91,4 +99,78 @@ class Cliente
     public function setCep($cep) {
         $this->cep = $cep;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEnderecoCob()
+    {
+        return $this->enderecoCob;
+    }
+
+    /**
+     * @param mixed $enderecoCob
+     * @return Cliente
+     */
+    public function setEnderecoCob($enderecoCob)
+    {
+        $this->enderecoCob = $enderecoCob;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMunicipioCob()
+    {
+        return $this->municipioCob;
+    }
+
+    /**
+     * @param mixed $municipioCob
+     * @return Cliente
+     */
+    public function setMunicipioCob($municipioCob)
+    {
+        $this->municipioCob = $municipioCob;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUfCob()
+    {
+        return $this->ufCob;
+    }
+
+    /**
+     * @param mixed $ufCob
+     * @return Cliente
+     */
+    public function setUfCob($ufCob)
+    {
+        $this->ufCob = $ufCob;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCepCob()
+    {
+        return $this->cepCob;
+    }
+
+    /**
+     * @param mixed $cepCob
+     * @return Cliente
+     */
+    public function setCepCob($cepCob)
+    {
+        $this->cepCob = $cepCob;
+        return $this;
+    }
+
+
 }

@@ -46,6 +46,33 @@ IF(isset($_GET)) {
 		    </tr>
         </tbody>
     </table>
+    <?php
+        if(!$cliente[$key]->getEnderecoCob()){
+            echo "<strong>O cliente não tem endereço de cobrança cadastrado. </strong><br><br>";
+        }
+        else{
+            ?>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Endereço de Cobrança</th>
+                    <th>Municipio</th>
+                    <th>UF</th>
+                    <th>CEP</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><?php echo $cliente[$key]->getEnderecoCob();?></td>
+                    <td><?php echo $cliente[$key]->getMunicipioCob();?></td>
+                    <td><?php echo $cliente[$key]->getUfCob();?></td>
+                    <td><?php echo $cliente[$key]->getCepCob();?></td>
+                </tr>
+                </tbody>
+            </table>
+            <?php
+        }
+    ?>
 
 <a href="../index.php"><button class="btn btn-info" >Voltar</button></a>
 </div><!-- /jumbotron -->
