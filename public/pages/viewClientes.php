@@ -69,7 +69,7 @@ require_once "header.php";
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="./pages/infoCliente.php?codigo=<?php echo $value->getId();?>">
+                                    <a href="./infoCliente.php?codigo=<?php echo $value->getId();?>">
                                         <button class="btn btn-info" type="submit" name="info">
                                             <span class="glyphicon glyphicon-plus-sign"></span> Informações
                                         </button>

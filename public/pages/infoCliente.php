@@ -74,7 +74,7 @@ IF(isset($_GET)) {
         }
     ?>
 
-<a href="../index.php"><button class="btn btn-info" >Voltar</button></a>
+<a href="index.php"><button class="btn btn-info" >Voltar</button></a>
 </div><!-- /jumbotron -->
 
 <?php require_once "../pages/footer.php"; ?>
