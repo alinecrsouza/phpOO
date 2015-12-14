@@ -1,7 +1,6 @@
 <?php
 
-namespace src\app\classes;
-
+namespace App\Util;
 
 interface EnderecoCobrancaInterface
 {

@@ -4,6 +4,9 @@
 require_once "header.php";
 require_once "dbCliente.php";
 
+require_once "/src/App/Cliente/Tipos/ClientePessoaFisica.php";
+use App\Cliente\Tipos\ClientePessoaFisica as ClientePessoaFisica;
+
 IF(isset($_GET)) {
     $key = $_GET["codigo"] - 1;
 }
@@ -29,7 +32,7 @@ IF(isset($_GET)) {
                 <td><?php echo $cliente[$key]->getId();?></td>
 			    <td><?php echo $cliente[$key]->getNome();?></td>
 			    <td><?php
-                    if($cliente[$key] instanceof \src\app\classes\ClientePessoaFisica){
+                    if($cliente[$key] instanceof ClientePessoaFisica){
                         echo $cliente[$key]->getCpf();
                     }
                     else{
@@ -74,7 +77,7 @@ IF(isset($_GET)) {
         }
     ?>
 
-<a href="index.php"><button class="btn btn-info" >Voltar</button></a>
+<a href="../index.php"><button class="btn btn-info" >Voltar</button></a>
 </div><!-- /jumbotron -->
 
 <?php require_once "../pages/footer.php"; ?>

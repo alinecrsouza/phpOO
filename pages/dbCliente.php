@@ -1,10 +1,10 @@
 <?php
 
-require_once "/../../src/app/classes/ClientePessoaFisica.php";
-require_once "/../../src/app/classes/ClientePessoaJuridica.php";
+require_once "/../src/App/Cliente/Tipos/ClientePessoaFisica.php";
+require_once "/../src/App/Cliente/Tipos/ClientePessoaJuridica.php";
 
-use src\app\classes\ClientePessoaFisica as ClientePessoaFisica;
-use src\app\classes\ClientePessoaJuridica as ClientePessoaJuridica;
+use App\Cliente\Tipos\ClientePessoaFisica as ClientePessoaFisica;
+use App\Cliente\Tipos\ClientePessoaJuridica as ClientePessoaJuridica;
 
 $cliente[0] = new ClientePessoaFisica(1, "João", "000.000.000-00", "cliente1@email.com.br", "(21) 5555-0000", "Endereço 1", "Município", "RJ", "28900-000");
 $cliente[1] = new ClientePessoaFisica(2, "Maria", "111.111.111-11", "cliente2@email.com.br", "(21) 5555-0001", "Endereço 2", "Município", "RJ", "28900-000");

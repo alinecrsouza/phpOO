@@ -1,6 +1,9 @@
 <?php
 require_once "header.php";
 
+require_once "/src/App/Cliente/Tipos/ClientePessoaFisica.php";
+use App\Cliente\Tipos\ClientePessoaFisica as ClientePessoaFisica;
+
 ?>
                 <h1>Clientes</h1>
                     <div class="jumbotron">
@@ -41,7 +44,7 @@ require_once "header.php";
                                 <tr>
                                 <td class="text-center"><?php echo $value->getId();?></td>
                                 <td><?php
-                                    if($value instanceof src\app\classes\ClientePessoaFisica){
+                                    if($value instanceof ClientePessoaFisica){
                                         echo "Pessoa Física";
                                     }
                                     else{
@@ -51,7 +54,7 @@ require_once "header.php";
                                 </td>
                                 <td><?php echo $value->getNome();?></td>
                                 <td><?php
-                                    if($value instanceof src\app\classes\ClientePessoaFisica){
+                                    if($value instanceof ClientePessoaFisica){
                                         echo $value->getCpf();
                                     }
                                     else{
@@ -69,7 +72,7 @@ require_once "header.php";
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="./infoCliente.php?codigo=<?php echo $value->getId();?>">
+                                    <a href="pages/infoCliente.php?codigo=<?php echo $value->getId();?>">
                                         <button class="btn btn-info" type="submit" name="info">
                                             <span class="glyphicon glyphicon-plus-sign"></span> Informações
                                         </button>

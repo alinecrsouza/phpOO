@@ -1,6 +1,10 @@
 <?php
 
-namespace src\app\classes;
+namespace App\Cliente\Tipos;
+
+use App\Cliente\Cliente;
+
+use App\Util\GrauImportanciaInterface;
 
 
 class ClientePessoaJuridica extends Cliente implements GrauImportanciaInterface

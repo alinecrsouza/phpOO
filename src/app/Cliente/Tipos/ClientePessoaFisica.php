@@ -1,9 +1,10 @@
 <?php
 
-namespace src\app\classes;
+namespace App\Cliente\Tipos;
 
-require_once "Cliente.php";
-require_once "GrauImportanciaInterface.php";
+use App\Cliente\Cliente;
+
+use App\Util\GrauImportanciaInterface;
 
 class ClientePessoaFisica extends Cliente implements GrauImportanciaInterface
 {

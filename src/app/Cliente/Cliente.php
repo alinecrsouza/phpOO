@@ -1,7 +1,7 @@
 <?php
-namespace src\app\classes;
+namespace App\Cliente;
 
-require_once "EnderecoCobrancaInterface.php";
+use App\Util\EnderecoCobrancaInterface;
 
 class Cliente implements EnderecoCobrancaInterface
 {
