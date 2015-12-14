@@ -14,7 +14,7 @@ require_once __DIR__ . '/../pages/dbCliente.php';
     <link rel="stylesheet" href="css/style.css"> -->
     <!-- Bootstrap -->
     <!--link href="http://127.0.0.1/PhpOO/public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"-->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/PhpOO/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">

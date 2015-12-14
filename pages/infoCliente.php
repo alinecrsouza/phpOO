@@ -4,7 +4,7 @@
 require_once "header.php";
 require_once "dbCliente.php";
 
-require_once "/src/App/Cliente/Tipos/ClientePessoaFisica.php";
+require_once "/../src/App/Cliente/Tipos/ClientePessoaFisica.php";
 use App\Cliente\Tipos\ClientePessoaFisica as ClientePessoaFisica;
 
 IF(isset($_GET)) {
