@@ -1,13 +1,9 @@
 <?php
 
-define ('CLASSES_DIR', '../src/');
-set_include_path(get_include_path().PATH_SEPARATOR.CLASSES_DIR);
-//spl_autoload_register(function ($class) { require_once(str_replace('\\', '/', $class . '.php')); });
-spl_autoload_register();
+require_once __DIR__ ."/../autoload.php";
 
-
-require_once "/../src/App/Cliente/Tipos/ClientePessoaFisica.php";
-require_once "/../src/App/Cliente/Tipos/ClientePessoaJuridica.php";
+require_once __DIR__ ."/../src/App/Cliente/Tipos/ClientePessoaFisica.php";
+require_once __DIR__ ."/../src/App/Cliente/Tipos/ClientePessoaJuridica.php";
 
 use App\Cliente\Tipos\ClientePessoaFisica as ClientePessoaFisica;
 use App\Cliente\Tipos\ClientePessoaJuridica as ClientePessoaJuridica;
