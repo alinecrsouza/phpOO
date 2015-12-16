@@ -1,0 +1,35 @@
+#RewriteEngine on
+#
+## Redirect all requests to index file.
+#
+##RewriteCond %{REQUEST_FILENAME} !-d
+##RewriteCond %{REQUEST_FILENAME} !-f
+##RewriteRule . index.php [NC,QSA]
+#
+##RewriteRule (.*) /$1 [NC,QSA]
+#
+#
+#
+## Redireciona tudo para o index.php
+#RewriteCond %{SCRIPT_FILENAME} !-f
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteRule ^(.*)([?/])$ index.php [L]
+##
+#RewriteCond %{SCRIPT_FILENAME} !-f
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php [L]
+
+RewriteEngine On
+RewriteBase /
+
+# Force '/' on the end of URL.
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ $1/ [QSA,L,R=301]
+
+# Redirect all requests to index file.
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [NC,QSA]
